@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+
+def init_grid(n, m)
+
+    arr = []
+
+    while arr.length < n do
+        
+        tmp = []
+
+        while tmp.length < m do
+            
+            tmp.append('.')
+
+        end
+
+        arr.append(tmp)
+
+    end
+
+    return arr
+
+end
+
+def display_grid(arr)
+
+    c = 1
+    print("    0   1   2   3   4   5   6\n")
+    for i in arr do
+        
+        print(c, sep = "   ")
+        for j in i do
+            
+            print(j, "   ")
+
+        end
+
+        print("\n\n")
+        c += 1
+
+    end
+end
+
+arr = init_grid(6, 7)
+display_grid(arr)
