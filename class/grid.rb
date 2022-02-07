@@ -7,7 +7,11 @@ class Grid
     
         @n = 6
         @m = 7
-        @grid = @line = @colums = @dia_one = @dia_two = []
+        @grid = []
+        @line = []
+        @colums = []
+        @dia_one = []
+        @dia_two = []
 
     end
 
@@ -18,15 +22,8 @@ class Grid
             tmp = []
             while tmp.length < @m do
                 
-                r = 1
-                
-                if r == 1
-                    tmp.append('.')
-                elsif r == 2
-                    tmp.append('X')
-                else
-                    tmp.append('O')
-                end
+                tmp.append('.')
+
             end
     
             @grid.append(tmp)
@@ -36,7 +33,7 @@ class Grid
     def display()
 
         c = 6
-        print("    1   2   3   4   5   6   7\n\n")
+        print("\n   1   2   3   4   5   6   7\n\n")
         len = @grid.length - 1
         for i in 0..len do
             
@@ -136,9 +133,9 @@ class Grid
         return false
     end
 
-    def full_colums(y)
+    def full_column(y)
     
-        if @grid[0][y] != '.'
+        if @grid[0][y] != "."
 
             return true
         end

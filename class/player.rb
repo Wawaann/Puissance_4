@@ -4,13 +4,14 @@ class Player
 
     def initialize
 
-        @name = @token = ""
+        @name = []
+        @token = []
     end
 
     def create(name, token)
 
-        @name = name
-        @token = token
+        @name.append(name)
+        @token.append(token)
     end
 
 end
