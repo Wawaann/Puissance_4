@@ -7,33 +7,12 @@ game.init()
 
 game.running()
 
+# ia = IA.new()
 
-# while 1 do
+# grid = Grid.new()
+# grid.init()
+# grid.insert(2, "X")
 
-#     grid.display()
-#     y = input("Choose column : ")
-#     y = y.to_i
-    
-#     if not grid.play(y, "X")
-#         grid.display()
-#     else
+# ia.update(grid, 2)
 
-#         grid.display()
-#         puts "Gagné !!\n"
-#         break
-#     end
-
-#     grid.display()
-#     y = input("Choose column : ")
-#     y = y.to_i
-    
-#     if not grid.play(y, "O")
-#         grid.display()
-#     else
-
-#         grid.display()
-#         puts "Gagné !!\n"
-#         break
-#     end
-
-# end
+# ia.disp()

@@ -1,4 +1,4 @@
-require_relative "grid.rb"
+require_relative "IA.rb"
 require_relative "player.rb"
 
 def input(text)
@@ -110,19 +110,24 @@ class Game
                 break
             end
             
-            i += 1
             puts "\e[H\e[2J"
+            puts "#{@players.name[i % 2]} has played in #{y} column\n"
+            i += 1
         end
 
         if win
             
-            @grid.display()
             puts "#{@players.name[i % 2]} a gagné !"
         else
 
             @grid.display()
             puts "ÉGALITÉ !\n"
         end
+    end
+
+    def PvIA()
+
+        
     end
 
     def running()
@@ -132,7 +137,7 @@ class Game
             PvP()
         elsif @mode == 2
 
-            puts "Contre l'ia\n"
+            PvIA()
         else
 
             puts "Wrong mode\n"
